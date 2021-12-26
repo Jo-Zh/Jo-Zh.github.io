@@ -15,18 +15,6 @@ body{
   background-color: rgba(0,0,0,0.8); 
 } 
 
-.flex-container{  
-  display:flex;
-  width: 100%;
-  height: 100vh;
-  flex-wrap: wrap;  
-  justify-content: center;
-  align-items: center; 
-}
-.main{
-  flex-basis: 100%;
-}
-
 a:link {
   color: white;
 }
@@ -45,25 +33,51 @@ a:hover {
 a:active {
   color: blue;
 }
-h1,h2{
-text-align:center;
+.flex-container{  
+  display:flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center; 
 }
+.main{
+  flex-basis: 100%;
+}
+
+h1.hello::before{
+  content: "";
+  display: inline-block;
+  background-image: url(./imagines/portrait-sm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  top:8%;
+  left:30%;
+  width:120px;
+  height:120px;
+  z-index: -1;  
+  }
+  
 h1.welcome{
+
 padding:10px;
 font-size: 50px;
 font-family:fantasy;
 text-shadow: 2px 2px 2px  grey;
 animation: color-change 5s infinite;
 }
+
 #quote-box{
   width: 50rem;
-  height: 30%; 
+  height: 200px; 
   color: blue; 
   margin: auto; 
   animation-name: fadeInDown;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-
 }
 
 .projects{
