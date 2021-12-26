@@ -14,7 +14,7 @@
 <body>
     <div class="nav" id="navbar">
         <h3> <a href="#projects"> Projects</a></h3>
-        <h3> <a href="#" target="_blank"> Feedback</a></h3>
+        <h3> <a href="#" target="_blank"> Learning Journey</a></h3>
         <h3> <a id="profile-link" href="#" target="_blank"> Contact</a></h3>
     </div>
 
@@ -22,9 +22,16 @@
 
     <div class="flex-container" id="welcome-section">
         <div class="main" id="container">
-            <h1 class="hello">Hey I am Jo </h1>
+            <div class="box">
+                <h1 class="hello">Hey I am Jo </h1>
+                <img class="photo" src="imagines/portrait-sm.jpg"/>
+            </div>
+            
+                <!-- <img src="imagines/portrait-sm.jpg"  alt="here is my photo"/>  -->
+            <!-- </div> -->
             <h2 >--a web developer</h2>
             <h1 class="welcome"> Welcome to visit my Website</h1>
+
         </div>
         <div id="quote-box">
             <p id="text" class="card-text">be inspired by the quotes</p>
@@ -36,19 +43,19 @@
     <div id="projects" class="projects">
 
         <a class="project-tile" href="https://github.com/Jo-Zh/A-Movie-Browser" target="_blank">
-            <img src="./imagines/StarWarMovie.jpg" alt="MovieBrowser" />Movie Browser
+            <img class="project" src="./imagines/StarWarMovie.jpg" alt="MovieBrowser" />Movie Browser
         </a>
         <a href="https://codepen.io/weina-zhong/full/XWeMVqz" target="_blank">
-            <img src="./imagines/MarkdownPreviewer.jpg" alt="Markdown Previewer" />Markdown Previewer
+            <img class="project" src="./imagines/MarkdownPreviewer.jpg" alt="Markdown Previewer" />Markdown Previewer
         </a>
         <a href="https://github.com/Jo-Zh/Personal-Expense-List" target="_blank">
-            <img src="./imagines/ExpenseItems.jpg" alt="Expense items" />Personal Expense List
+            <img class="project" src="./imagines/ExpenseItems.jpg" alt="Expense items" />Personal Expense List
         </a>
         <a href="https://codepen.io/weina-zhong/full/GRMEomB" target="_blank">
-            <img src="./imagines/DrumMachine.jpg" alt="DrumMachine" />Drum Machine
+            <img class="project" src="./imagines/DrumMachine.jpg" alt="DrumMachine" />Drum Machine
         </a>
         <a href="https://github.com/Jo-Zh/A-Movie-Browser" target="_blank">
-            <img src="https://raw.githubusercontent.com/Jo-Zh/dataAnalysis-Project-Medical-Data-Visualizer/main/heatmap.png"
+            <img class="project" src="https://raw.githubusercontent.com/Jo-Zh/dataAnalysis-Project-Medical-Data-Visualizer/main/heatmap.png"
                 alt="Medical-Dt-Visualizer" />Medical-Data-Visualizer
         </a>
 
@@ -61,9 +68,27 @@
         <h4> <a href="#" target="_blank"> Contact</a></h4>
     </div>
 
+    <img class="pop-up" src="./imagines/merrychristmas.jpg" alt="Merry Christmas" />
     <!-- below is JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="Quotes.js"></script>
+    <script>
+        $(document).ready(() => {
+            $( "body" ).click(
+                (e)=>{
+                    
+                    $(".pop-up").css("animation-play-state", "running")
+                                .css("animation-iteration-count", "infinite")
+                                .css("left", e.pageX+"px")
+                                .css("top", e.pageY+"px");
+                
+                    const Timeout=setTimeout(
+                        ()=>{$(".pop-up").css("animation-play-state", "paused")}, 2000
+                    );
+  
+});
+        });
+    </script>
 
 </body>
 
