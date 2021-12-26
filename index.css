@@ -75,7 +75,7 @@ animation: color-change 5s infinite;
   height: 200px; 
   color: blue; 
   margin: auto; 
-  animation-name: fadeInDown;
+  animation-name: fadeInLeft;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
@@ -118,18 +118,18 @@ img{
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInLeft {
   0% {
       opacity: 0;
-      transform: translateX(0%);
+      transform: translateX(-50%);
   }
   50% {
       opacity: 1;
-      transform: translateX(50%);
+      transform: translateX(0%);
   }
   100%{
       opacity: 0;
-      transform: translateX(100%);
+      transform: translateX(50%);
   }
 }
 
