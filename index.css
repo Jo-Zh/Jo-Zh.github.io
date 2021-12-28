@@ -90,11 +90,15 @@ animation: color-change 5s infinite;
   row-gap:10px;
 
 }
-img.project{
-  box-shadow: 2px 2px 2px 2px grey;
-  width: 300px;
-  height: 300px;
+img.card-img-top{
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
   }
+.card{
+  font-size: 15px;
+  background-color: cadetblue;
+}
 .footer{
   display:flex;
   flex-wrap:wrap;
@@ -133,6 +137,7 @@ img.project{
       transform: translateX(50%);
   }
 }
+
 
 /*Animation end  */
 

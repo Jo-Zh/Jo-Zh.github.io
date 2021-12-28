@@ -5,8 +5,8 @@ $(document).ready(() => {
     $.get("https://type.fit/api/quotes", (data) => {
       const quote = JSON.parse(data);
       const num = Math.ceil(Math.random() * (quote.length - 1));
-      $("p").html(quote[num]["text"]);
-      $("h5").html(quote[num]["author"]);
+      $("#text").html(quote[num]["text"]);
+      $("#author").html(quote[num]["author"]);
     });
   };
   //first load....

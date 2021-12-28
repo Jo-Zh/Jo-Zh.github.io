@@ -8,28 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Portfolio</title>
 </head>
 
 <body>
-    <div class="nav" id="navbar">
+    <!-- This is the header  -->
+    <header class="nav" id="navbar">
         <h3> <a href="#projects"> Projects</a></h3>
         <h3> <a href="#" target="_blank"> Learning Journey</a></h3>
         <h3> <a id="profile-link" href="#" target="_blank"> Contact</a></h3>
-    </div>
+    </header>
 
 
-
+    <!-- This is the welcome section -->
     <div class="flex-container" id="welcome-section">
         <div class="main" id="container">
             <div class="box">
                 <h1 class="hello">Hey I am Jo </h1>
-                <img class="photo" src="imagines/portrait-sm.jpg"/>
+                <img class="photo" src="imagines/portrait-sm.jpg" />
             </div>
-            
-                <!-- <img src="imagines/portrait-sm.jpg"  alt="here is my photo"/>  -->
-            <!-- </div> -->
-            <h2 >--a web developer</h2>
+
+            <h2>--a web developer</h2>
             <h1 class="welcome"> Welcome to visit my Website</h1>
 
         </div>
@@ -39,56 +39,80 @@
         </div>
     </div>
 
-    <h2 style="margin:20px;">Here is some of my projects</h2>
+    <!-- here is a piece of hidden festival greeting, 
+        it will pop up upon mouse clicking the window -->
+    <img class="pop-up" src="./imagines/merrychristmas.jpg" alt="Merry Christmas" />
+
+    <!-- Project Section with links to myProjects.html -->
+    <h2 style="margin:20px;">These are some of my works </h2>
+    <a href="myProjects.html">Click here find more detail and repo links</a>
+    <br></br>
     <div id="projects" class="projects">
 
-        <a class="project-tile" href="https://github.com/Jo-Zh/A-Movie-Browser" target="_blank">
-            <img class="project" src="./imagines/StarWarMovie.jpg" alt="MovieBrowser" />Movie Browser
-        </a>
-        <a href="https://codepen.io/weina-zhong/full/XWeMVqz" target="_blank">
-            <img class="project" src="./imagines/MarkdownPreviewer.jpg" alt="Markdown Previewer" />Markdown Previewer
-        </a>
-        <a href="https://github.com/Jo-Zh/Personal-Expense-List" target="_blank">
-            <img class="project" src="./imagines/ExpenseItems.jpg" alt="Expense items" />Personal Expense List
-        </a>
-        <a href="https://codepen.io/weina-zhong/full/GRMEomB" target="_blank">
-            <img class="project" src="./imagines/DrumMachine.jpg" alt="DrumMachine" />Drum Machine
-        </a>
-        <a href="https://github.com/Jo-Zh/A-Movie-Browser" target="_blank">
-            <img class="project" src="https://raw.githubusercontent.com/Jo-Zh/dataAnalysis-Project-Medical-Data-Visualizer/main/heatmap.png"
-                alt="Medical-Dt-Visualizer" />Medical-Data-Visualizer
-        </a>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">A Product Landing Page <br />developed with html, css and jQuery</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./imagines/MarkdownPreviewer.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Markdown Previewer <br />developed with React-js</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./imagines/DrumMachine.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Drum Machine<br />developed with React-js</p>
+            </div>
+        </div>
 
-        <a class="text" href="https://github.com/Jo-Zh?tab=repositories" target="_blank">More...</a>
+        <div class="card" style="width: 18rem;">
+            <img src="./imagines/MovieBrowser.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">A Movie Browser<br />
+                    developed with React-js and router</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./imagines/ExpenseItems.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">ExpenseItems<br />
+                    A Useful React-js App track your daily expenses</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Demographic-Analysis<br />
+                    developed with python, pandas</p>
+            </div>
+        </div>
+
+
+
+        <a class="text" href="myProjects.html" target="_blank">More...</a>
     </div>
-
+    <hr />
+    <!-- This is the footer -->
     <div class="footer">
         <h4> <a href="#" target="_blank"> Projects</a></h4>
-        <h4> <a href="#" target="_blank"> Feedback</a></h4>
-        <h4> <a href="#" target="_blank"> Contact</a></h4>
+        <h4> <a href="#" target="_blank"> Learning Journey</a></h4>
+        <h4> <a href="#" target="_blank"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+        </h4>
     </div>
 
-    <img class="pop-up" src="./imagines/merrychristmas.jpg" alt="Merry Christmas" />
-    <!-- below is JS -->
+
+
+
+    <!-- Here start jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="Quotes.js"></script>
-    <script>
-        $(document).ready(() => {
-            $( "body" ).click(
-                (e)=>{
-                    
-                    $(".pop-up").css("animation-play-state", "running")
-                                .css("animation-iteration-count", "infinite")
-                                .css("left", e.pageX+"px")
-                                .css("top", e.pageY+"px");
-                
-                    const Timeout=setTimeout(
-                        ()=>{$(".pop-up").css("animation-play-state", "paused")}, 2000
-                    );
-  
-});
-        });
-    </script>
+    <script src="windowClick.js"></script>
 
 </body>
 
