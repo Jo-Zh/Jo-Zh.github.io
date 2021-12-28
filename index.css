@@ -1,3 +1,11 @@
+/* custom colors ----------------------------------------------*/
+:root{
+  --grey: rgb(142, 142, 142);
+  --blue: rgb(0, 0, 255);
+  --green:rgb(2, 146, 2);
+  
+/* style for whole body -----------------------------------  */
+}
 body{
   top:0;
   left:0;
@@ -6,14 +14,6 @@ body{
   text-align: center;
   
 }
-.nav{ 
-  display: flex;
-  position:fixed;
-  height: fit-content;
-  width: 100%;
-  justify-content: space-around;
-  background-color: rgba(0,0,0,0.8); 
-} 
 
 a:link {
   color: white;
@@ -21,7 +21,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: green;
+  color:var(--green, green);
 }
 
 /* mouse over link */
@@ -31,56 +31,80 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: blue;
+  color: var(--green, green);
 }
+/* visible when mouse click window  */
+.pop-up{
+  position:absolute;
+  left:0px;
+  top: 0px;
+  z-index: -1;
+  opacity:0;
+  animation-name: showup;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+  animation-play-state: paused;
+}
+
+
+/* Here starts header style --------------------------------------*/
+.nav{ 
+  display: flex;
+  position: sticky;
+  top:0;
+  left:0;
+  height: fit-content;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgba(11, 11, 11);
+  z-index: 1; 
+} 
+
+/* Here is Welcome section style -------------------------------*/
 .flex-container{  
   display:flex;
+  flex-direction:column;
   width: 100%;
   height: 100vh;
   flex-wrap: wrap;  
   justify-content: center;
   align-items: center; 
-}
-.main{
-  flex-basis: 100%;
+  margin:5px;
 }
 
-.box{
-  flex-basis: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-   
-}
+  .box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+    .photo{
+      width:100px;
+      height: 120px;
+      margin:10px;
+      border-radius: 50%;
+    }
 
-.photo{
-  width:100px;
-  height: 120px;
-  margin:10px;
-  border-radius: 50%;
-}
+  h1.welcome{
+    padding:10px;
+    font-size: 30px;
+    font-family:fantasy;
+    text-shadow: 2px 2px 2px  var(--grey, grey);
+    animation: color-change 5s infinite;
+  }
 
-  
-h1.welcome{
-flex-basis: 100%;
-padding:10px;
-font-size: 50px;
-font-family:fantasy;
-text-shadow: 2px 2px 2px  grey;
-animation: color-change 5s infinite;
-}
+  #quote-box{
+    width: 50rem;
+    height: 200px; 
+    color: var(--blue,blue); 
+    margin: auto; 
+    animation-name: fadeInLeft;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;  
+  }
 
-#quote-box{
-  width: 50rem;
-  height: 200px; 
-  color: blue; 
-  margin: auto; 
-  animation-name: fadeInLeft;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
+/* Here is projects displaying style ------------------------------*/
 .projects{
   display: grid;
   grid-template-columns: 320px 320px 320px;
@@ -90,15 +114,17 @@ animation: color-change 5s infinite;
   row-gap:10px;
 
 }
-img.card-img-top{
+  img.card-img-top{
     height: calc(100% - 6.8rem);
     width: 100%;
     object-fit: cover;
   }
-.card{
-  font-size: 15px;
-  background-color: cadetblue;
-}
+  .card{
+    font-size: 15px;
+    background-color: cadetblue;
+  }
+
+/* Here is footer style -------------------------------------*/
 .footer{
   display:flex;
   flex-wrap:wrap;
@@ -107,19 +133,21 @@ img.card-img-top{
   background-color: black;
 }
 
-/* Animations */
+
+
+/* Animations ------------------------------------------------*/
 @keyframes color-change{
   0%{
     color:var(--main-color);
-    text-shadow: 2px 2px 2px  grey;   
+    text-shadow: 2px 2px 2px  var(--grey, grey);   
   }
   50%{
     color:orange;
-    text-shadow: 5px 5px 5px  grey;
+    text-shadow: 5px 5px 5px  var(--grey, grey);
   }
   100%{
     color: green;
-    text-shadow: 2px 2px 2px  grey;
+    text-shadow: 2px 2px 2px  var(--grey, grey);
   }
 }
 
@@ -138,61 +166,38 @@ img.card-img-top{
   }
 }
 
-
+@keyframes showup {
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:0;
+  }
+}
 /*Animation end  */
 
-@media(max-width:680px){
+/* RWD setting -------------------------------------------------*/
+@media screen and (max-width: 767px){
   body{
     font-size:15px;
   }
+
   .nav{
     display: none;
   }
-  .flex-container{
-    display:flex;
-    flex-direction: column;
-  }
-  @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateX(50%);
+
+    #quote-box{
+      animation-play-state: paused;
     }
-    50% {
-        opacity: 1;
-        transform: translateX(50%);
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(50%);
-    }
-  }
 
   .projects{
     display: grid;
     grid-template-columns: auto;
   }
-  }
+}
 
-  .pop-up{
-    position:absolute;
-    left:0px;
-    top: 0px;
-    z-index: -1;
-    opacity:0;
-    animation-name: showup;
-    animation-duration: 2s;
-    animation-iteration-count:infinite;
-    animation-play-state: paused;
-  }
 
-  @keyframes showup {
-    0%{
-      opacity:0;
-    }
-    50%{
-      opacity:0.5;
-    }
-    100%{
-      opacity:0;
-    }
-  }
+  
