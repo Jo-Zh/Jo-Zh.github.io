@@ -1,8 +1,10 @@
 /* custom colors ----------------------------------------------*/
 :root{
-  --grey: rgb(142, 142, 142);
-  --blue: rgb(0, 0, 255);
-  --green:rgb(2, 146, 2);
+  --mygrey: rgb(142, 142, 142);
+  --myblue: rgb(17, 17, 200);
+  --mygreen:rgb(18, 197, 113);
+  --myred:rgb(240, 65, 65);
+  --myyellow:rgb(240, 200, 23);
   
 /* style for whole body -----------------------------------  */
 }
@@ -10,42 +12,43 @@ body{
   top:0;
   left:0;
   font-size: 25px;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 100%);
-  text-align: center;
-  
+  background-color: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 60%);;
+  text-align: center;    
 }
 
+a{
+  text-decoration: none;
+}
 a:link {
   color: white;
 }
 
 /* visited link */
 a:visited {
-  color:var(--green, green);
+  color:var(--mygreen, green);
 }
 
 /* mouse over link */
 a:hover {
-  color: yellow;
+  background-color: var(--myyellow, yellow);
 }
 
 /* selected link */
 a:active {
-  color: var(--green, green);
+  color: white;
 }
 /* visible when mouse click window  */
 .pop-up{
   position:absolute;
   left:0px;
   top: 0px;
-  z-index: -1;
   opacity:0;
   animation-name: showup;
   animation-duration: 2s;
   animation-iteration-count:infinite;
   animation-play-state: paused;
+  z-index: -1;
 }
-
 
 /* Here starts header style --------------------------------------*/
 .nav{ 
@@ -61,17 +64,9 @@ a:active {
 } 
 
 /* Here is Welcome section style -------------------------------*/
-.flex-container{  
-  display:flex;
-  flex-direction:column;
-  width: 100%;
+#welcome-section{
   height: 100vh;
-  flex-wrap: wrap;  
-  justify-content: center;
-  align-items: center; 
-  margin:5px;
 }
-
   .box{
     display: flex;
     flex-direction: row;
@@ -84,46 +79,54 @@ a:active {
       height: 120px;
       margin:10px;
       border-radius: 50%;
+      box-shadow: 5px 5px 5px var(--mygrey, grey);
     }
-
+  h1,h2{
+    text-shadow: 5px 5px 5px  var(--mygrey, grey);
+  }  
   h1.welcome{
     padding:10px;
     font-size: 30px;
     font-family:fantasy;
-    text-shadow: 2px 2px 2px  var(--grey, grey);
     animation: color-change 5s infinite;
   }
 
   #quote-box{
     width: 50rem;
     height: 200px; 
-    color: var(--blue,blue); 
+    color: var(--myblue,blue); 
     margin: auto; 
     animation-name: fadeInLeft;
     animation-duration: 5s;
-    animation-iteration-count: infinite;  
+    animation-iteration-count: infinite;
+    visibility: visible;  
   }
 
 /* Here is projects displaying style ------------------------------*/
+u{
+  font-weight: bold;
+}
 .projects{
   display: grid;
-  grid-template-columns: 320px 320px 320px;
+  grid-template-columns: 300px 300px 300px;
   justify-content: space-around;
   align-items:center;
   column-gap: 5px;
-  row-gap:10px;
+  row-gap:20px;
 
 }
-  img.card-img-top{
-    height: calc(100% - 6.8rem);
-    width: 100%;
-    object-fit: cover;
+  .item{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px var(--mygrey, grey);
+    background-color:rgb(9, 10, 10);
+    border:2px solid rgb(9, 10, 10);
   }
-  .card{
-    font-size: 15px;
-    background-color: cadetblue;
-  }
-
+    .poster{
+      width:100%; 
+      height: 250px;
+    }
+  
 /* Here is footer style -------------------------------------*/
 .footer{
   display:flex;
@@ -138,16 +141,16 @@ a:active {
 /* Animations ------------------------------------------------*/
 @keyframes color-change{
   0%{
-    color:var(--main-color);
-    text-shadow: 2px 2px 2px  var(--grey, grey);   
+    color:var(--myred, red);
+    text-shadow: 2px 2px 2px  var(--mygrey, grey);   
   }
   50%{
-    color:orange;
-    text-shadow: 5px 5px 5px  var(--grey, grey);
+    color:var(--myyellow, yellow);
+    text-shadow: 5px 5px 5px  var(--mygrey, grey);
   }
   100%{
-    color: green;
-    text-shadow: 2px 2px 2px  var(--grey, grey);
+    color:var(--mygreen, green);
+    text-shadow: 2px 2px 2px  var(--mygrey, grey);
   }
 }
 
@@ -182,7 +185,7 @@ a:active {
 /* RWD setting -------------------------------------------------*/
 @media screen and (max-width: 767px){
   body{
-    font-size:15px;
+    font-size:20px;
   }
 
   .nav{
@@ -190,7 +193,8 @@ a:active {
   }
 
     #quote-box{
-      animation-play-state: paused;
+     animation-play-state: paused;
+     visibility: hidden;   
     }
 
   .projects{
