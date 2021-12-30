@@ -11,7 +11,7 @@ $(document).ready(() => {
   };
 
   //Load quotes....
-  const quoteSet = setInterval(quoteMachine, 5000);
+  const quoteSet = setInterval(quoteMachine, 60000);
   quoteSet;
 
   //stop showing quotes in small screen
