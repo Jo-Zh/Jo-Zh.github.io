@@ -12,9 +12,9 @@ body{
   top:0;
   left:0;
   font-size: 25px;
-  background-image:
+  background-image:linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 90%),
   url("./imagines/Background-sm.jpg");
-  /* linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 90%), */
+  
   background-size:cover;
   text-align: center;
 }
