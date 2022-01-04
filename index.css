@@ -12,9 +12,10 @@ body{
   top:0;
   left:0;
   font-size: 25px;
-  background-image:linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 90%),
-  url("./imagines/Background-sm.jpg");
-  
+  background-color: black;
+  /* linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.3) 90%), */
+  /* url("./imagines/Background-sm.jpg"); */
+  color:white;
   background-size:cover;
   text-align: center;
 }
@@ -59,7 +60,7 @@ a:active {
   height: fit-content;
   width: 100%;
   justify-content: space-around;
-  background-color: rgba(11, 11, 11);
+  background-color: rgb(27, 23, 23);
   z-index: 1; 
 } 
 
@@ -74,22 +75,23 @@ a:active {
     font-family:fantasy;
     animation: color-change 5s infinite;
   }
-  .box{
+  /* .box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-  }
+  } */
     .photo{
-      width:100px;
+      width:120px;
       height: 120px;
       margin:10px;
       border-radius: 50%;
-      box-shadow: 5px 5px 5px var(--mygrey, grey);
+      /* box-shadow: 5px 5px 5px var(--mygrey, grey); */
     }
   h1,h2{
+   
     text-shadow: 5px 5px 5px  var(--mygrey, grey);
   }  
 
@@ -136,9 +138,8 @@ u{
   .item{
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 5px var(--myyellow, grey);
     background-color:rgb(9, 10, 10);
-    border:3px solid var(--myyellow);
+    border:3px solid var(--mygrey);
   }
     .poster{
       width:100%; 
