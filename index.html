@@ -9,6 +9,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <title>My Portfolio</title>
 </head>
 
@@ -16,73 +17,92 @@
 
     <!-- This is the header  ----------------------------------->
     <header class="nav" id="navbar">
-        <h3> <a href="#projects"> Projects</a></h3>
-        <h3> <a href=".pdf" download> Experience</a></h3>
+        <h3 class="logo">J<span>&middot</span>Z</h3>
+        <h3> <a href="#"> About</a></h3>
+        <h3> <a href="#projects">Projects</a></h3>
+        <h3> <a href="#" >Skills</a></h3>
         <h3> <a id="profile-link" href="#footer"> Contact</a></h3>
     </header>
 
     <!-- This is the welcome section ---------------------------->
     <div class="container-fluid" id="welcome-section">
-        <h1 class="welcome"> Welcome to visit my Website</h1>
-        <br />
-        <!-- <div class="box"> -->
-            <img class="photo" src="imagines/portrait-sm.jpg" />
-            <h1 class="hello">Hey I am Jo </h1>
-           
+        <div id="about" class="about">
+            <u>A bit about me...</u>
+            <p class="typing">
+                Skilled in:<br> JavaScript, CSS, Html, jQuery, bootstrap <br>
+                Knowledge in :<br> python, Excel VBA, C <br>
+                Hightlight projects:<br> 
+                React App: <a href="https://codepen.io/weina-zhong/full/abLGbgw" target="_blank" >Calculator</a>
+                RWD Website: <a href="https://codepen.io/weina-zhong/full/RwLQaML" target="_blank" >product-landing-page</a><br>
+                ...more click <a href="myProjects.html" target="_blank">Projects</a>
+            </p>
+            
+        </div>
+        
+        <div class="welcome">
+            <!-- <div class="box"> -->
+                <!-- <img class="photo" src="imagines/portrait-sm.jpg" /> -->
+                <h1 class="hello">Hey I am Jo </h1>
+                <h2>--a web developer</h2>
+                <h1 > Welcome to visit my Website</h1>
+                <p style="color: rebeccapurple">scroll down to project area.<span class="arrow-down">&#8659;</span></p>
+        </div>
         <!-- </div> -->
-        <h2>--a web developer</h2>
-        <br />
-        <div id="quote-box">
+        <!-- <div id="quote-box">
             <p id="text" class="card-text"> Setting goals is the first step into turning the invisible into the visible.</p>
             <h5 id="author" class="card-title">Tony Robbins</h5>
             <button id="close-quote" type="button" class="btn-close" aria-label="Close"></button>
-        </div>
+        </div> -->
     </div>
+   
 
     <!-- here is a piece of hidden festival greeting, 
         it will pop up upon mouse clicking the window ---------->
     <img class="pop-up" src="./imagines/NewYear.png" alt="Merry Christmas" />
 
-    <hr />
+   
     <!-- Project Section with links to myProjects.html --------->
-    <h2><u>Some of my projects</u></h2>
-    <br></br>
-    <div id="projects" class="projects">
-        <div class="item">
-            <a href="https://codepen.io/weina-zhong/full/abLGbgw" target="_blank">
-                <img class="poster" src="./imagines/Js-Calculator.jpg" alt="..." />
-                Calculator</a>
-        </div>
-        <div class="item">
-            <a href="https://codepen.io/weina-zhong/full/GRMEomB" target="_blank">
-                <img class="poster" src="./imagines/DrumMachine.jpg" alt="..." />
-                Drum Machine</a>
-        </div>
-        <div class="item">
-            <a href="https://github.com/Jo-Zh/A-Movie-Browser">
-                <img class="poster" src="./imagines/MovieBrowser.jpg" alt="..." />
-                Movie Browser</a>
-        </div>
-        <div></div>
-        <div class="item">
-            <a id="item-link" href="myProjects.html">
-                <img class="poster" src="./imagines/myProject.jpg" alt="..." />
-                About more...</a>
+    <div class="projects-area">
+        <h2><u>Projects</u></h2>
+        <br></br>
+        <div id="projects" class="projects">
+            <div class="item">
+                <a href="https://codepen.io/weina-zhong/full/abLGbgw" target="_blank">
+                    <img class="poster" src="./imagines/Js-Calculator.jpg" alt="..." />
+                    Calculator</a>
+            </div>
+            <div class="item">
+                <a href="https://codepen.io/weina-zhong/full/GRMEomB" target="_blank">
+                    <img class="poster" src="./imagines/DrumMachine.jpg" alt="..." />
+                    Drum Machine</a>
+            </div>
+            <div class="item">
+                <a href="https://github.com/Jo-Zh/A-Movie-Browser">
+                    <img class="poster" src="./imagines/MovieBrowser.jpg" alt="..." />
+                    Movie Browser</a>
+            </div>
+            <div></div>
+            <div class="item">
+                <a id="item-link" href="myProjects.html">
+                    <img class="poster" src="./imagines/myProject.jpg" alt="..." />
+                    About more...</a>
+            </div>
         </div>
     </div>
     <hr />
     <!-- This is the footer ------------------------------------>
     <div id="footer" class="footer">
         <h4> <a href="myProjects.html" target="_blank"> Projects</a></h4>
-        <h4> <a href="documents/SoftwareDeveloper-Resume-template.pdf" download> Experience</a></h4>
+        <h4> <a href="#about" download> About</a></h4>
         <h4> <a href="https://www.linkedin.com/in/joannaweinazh" target="_blank"><i class="fa fa-linkedin-square"
                     style="font-size:36px"></i></a>
             <a href="mailto:joannaweinazh@gmail.com" target="_blank"><i class="fa fa-envelope"
                     style="font-size:36px"></i></a>
         </h4>
         <!--# Site developed by: Joanna Z. -->
+        <p> 2022 Design and coded by Joanna Zhong </p>
     </div>
-    <h5>Design and coded by Joanna Zhong 2022</h5>
+   
 
 
 
