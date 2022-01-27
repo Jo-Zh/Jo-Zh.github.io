@@ -1,4 +1,7 @@
 /* custom colors ----------------------------------------------*/
+*{
+  margin:0;
+}
 :root{
   --mygrey: rgb(87, 85, 85);
   --myblue: rgb(17, 17, 200);
@@ -67,19 +70,36 @@ a:active {
 
 /* Here starts header style --------------------------------------*/
 .nav{ 
-  display: flex;
-  position: sticky;
+  position: fixed;
   top:0;
   left:0;
-  height: fit-content;
   width: 100%;
-  
-  justify-content: space-around;
   background-color: rgb(27, 23, 23);
   z-index: 1; 
-} 
+}
+.nav ul{
+  width:80%;
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+}
+.nav > ul > li{
+  float: right;
+  margin:1rem;
 
+}
+nav>ul>li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
 .logo{
+  width: 70px;
+  height:70px;
+  margin: auto 50px auto 15px;
+  float:left;
   border-radius: 20%;
   border:2px solid var(--mygreen);
   box-shadow: 5px 5px 5px var(--mygreen);
@@ -98,7 +118,6 @@ a:active {
 }
 
   .about{
-    width: 15rem;
     height:fit-content;
     padding: 0.625rem;
     border-radius: 6px;
@@ -115,7 +134,7 @@ a:active {
       width: 106px;
       height:125px;
       margin:10px;
-      /* border-radius: 50%; */
+      border-radius: 50%;
       /* box-shadow: 5px 5px 5px var(--mygrey, grey); */
     }
   h1,h2{
@@ -198,9 +217,7 @@ u{
   flex-basis: 100%;
   font-size: 0.625rem;
 }
-#footer > p:before{
-  content:"\00A9";
-}
+
 
 
 
