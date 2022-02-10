@@ -108,11 +108,13 @@ nav>ul>li a {
 
   #about{
     margin:5rem;
-    /* width: 100vh; */
+    width: fit-content;
+  }
+  #about div{
+    margin-left: 0.2rem;
   }
   .typing{
-    height:fit-content;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border-radius: 6px;
     box-shadow: 2px 2px 3px var(--mygrey);
     font-size: 15px;
@@ -137,19 +139,18 @@ nav>ul>li a {
   h1{
     padding:0;
     font-size: 2em;
-    text-shadow: 5px 5px 5px white;
-    color: rebeccapurple;
-    text-shadow: 5px 5px 5px  var(--mygrey, grey);
+    color: var(--myyellow);
+    text-shadow: 5px 5px 5px  var(--mygrey);;
  }
- #about h4 {
-    color: rebeccapurple;
+ #about h3 {
+    color: var(--myyellow);
     font-family: 'Times New Roman', Times, serif;
   
   }
  
  #about p, span{
    
-    color: rebeccapurple;
+    color: var(--myblue);
   }
   /*set quote style  */
   #quote-box{
