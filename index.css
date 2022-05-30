@@ -1,40 +1,44 @@
 /* custom colors ----------------------------------------------*/
-*{
-  margin:0;
+* {
+  margin: 0;
 }
-:root{
+:root {
   --mygrey: rgb(87, 85, 85);
   --myblue: rgb(17, 17, 200);
-  --mygreen:rgb(113, 241, 181);
-  --myred:rgb(240, 65, 65);
-  --myyellow:rgb(240, 200, 23);
-  --mydarkgrey:rgb(31, 30, 30);
+  --mygreen: rgb(113, 241, 181);
+  --myred: rgb(240, 65, 65);
+  --myyellow: rgb(240, 200, 23);
+  --mydarkgrey: rgb(31, 30, 30);
   font-size: 25px;
-}  
-  
+}
+
 /* style for whole body -----------------------------------  */
 
-body{
-  top:0;
-  left:0;
-  font-size:1rem;
-  color:white;
-  background: rgb(255,255,255);
+body {
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  color: white;
+  background: rgb(255, 255, 255);
   font-family: "Trirong", serif;
-  background-image: linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(159,156,156,0.5) 100%),url(./imagines/Background-sm.jpg); 
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.65) 0%,
+      rgba(159, 156, 156, 0.5) 100%
+    ),
+    url(./imagines/Background-sm.jpg);
   background-size: cover;
   text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 0.8rem;
 }
 /* visited link */
 a:visited {
-  color:var(--mygreen);
- 
+  color: var(--mygreen);
 }
 
 /* mouse over link */
@@ -47,73 +51,72 @@ a:active {
   color: white;
 }
 
-.arrow-down{
-  font-size:1rem;
+.arrow-down {
+  font-size: 1rem;
   animation-name: arrow-down;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 
-  border:2px solid red;
+  border: 2px solid red;
 }
 /* visible when mouse click window  */
-.pop-up{
-  position:absolute;
-  left:0px;
+.pop-up {
+  position: absolute;
+  left: 0px;
   top: 0px;
-  opacity:0;
+  opacity: 0;
   animation-name: showup;
   animation-duration: 2s;
-  animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
   animation-play-state: paused;
   z-index: -1;
 }
 
 /* Here starts header style --------------------------------------*/
-.nav{ 
+.nav {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: rgb(27, 23, 23);
-  z-index: 1; 
+  z-index: 1;
 }
-.nav ul{
-  width:80%;
+.nav ul {
+  width: 80%;
   list-style-type: none;
-  padding:0;
+  padding: 0;
   margin: 0;
 }
-.nav > ul > li{
+.nav > ul > li {
   float: right;
-  margin:1rem;
-
+  margin: 1rem;
 }
-nav>ul>li a {
+nav > ul > li a {
   display: block;
   text-align: center;
   padding: 16px;
   text-decoration: none;
   font-weight: bold;
 }
-.logo{
+.logo {
   width: 70px;
-  height:70px;
+  height: 70px;
   margin: auto 50px auto 15px;
-  float:left;
+  float: left;
   border-radius: 20%;
-  border:2px solid var(--mygreen);
+  border: 2px solid var(--mygreen);
   box-shadow: 5px 5px 5px var(--mygreen);
 }
 /* Here is Welcome section style -------------------------------*/
 
-  #about{
-    margin:5rem;
-    width: fit-content;
-  }
-  #about div{
-    margin-left: 0.2rem;
-  }
-  .typing{
+#about {
+  margin: 5rem;
+  width: fit-content;
+}
+#about div {
+  margin-left: 0.2rem;
+}
+/* .typing{
     padding: 0.2rem;
     border-radius: 6px;
     box-shadow: 2px 2px 3px var(--mygrey);
@@ -130,170 +133,160 @@ nav>ul>li a {
       height:125px;
       margin:10px;
       border-radius: 50%;
-      /* box-shadow: 5px 5px 5px var(--mygrey, grey); */
-    }
-  .col{
+      box-shadow: 5px 5px 5px var(--mygrey, grey);
+    } */
+/* .col{
     padding:0;
     margin:0;
-  }
-  h1{
-    padding:0;
-    font-size: 2em;
-    color: var(--myyellow);
-    text-shadow: 5px 5px 5px  var(--mygrey);;
- }
- #about h3 {
-    color: var(--myyellow);
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
- 
- #about p, span{
-   
-    color: var(--myblue);
-  }
-  /*set quote style  */
-  #quote-box{
-    flex-basis: 100%;
-    width: 50rem;
-    height: 200px; 
-    color: var(--mygreen,blue); 
-    margin: auto; 
-    visibility: visible;
-    /* z-index: 1;  */
-  }
+  } */
+h1 {
+  padding: 0;
+  font-size: 2em;
+  color: var(--myyellow);
+  text-shadow: 5px 5px 5px var(--mygrey);
+}
+#about h3 {
+  color: var(--myyellow);
+  font-family: "Times New Roman", Times, serif;
+}
 
-  #quote-box:hover{
-    animation-play-state: paused;
-  }
-    .btn-close{
-      width:5px;
-      height:5px;
-      border: 1px solid var(--mygrey)
-    }
-    #author::before{
-      content: " .\2012";
-    }
-  /* end set quote style  */
+#about p,
+span {
+  color: var(--myblue);
+}
+/*set quote style  */
+#quote-box {
+  flex-basis: 100%;
+  width: 50rem;
+  height: 200px;
+  color: var(--mygreen, blue);
+  margin: auto;
+  visibility: visible;
+  /* z-index: 1;  */
+}
+
+#quote-box:hover {
+  animation-play-state: paused;
+}
+.btn-close {
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--mygrey);
+}
+#author::before {
+  content: " .\2012";
+}
+/* end set quote style  */
 
 /* Here is projects displaying style ------------------------------*/
 
-u{
+u {
   font-weight: bold;
 }
-.projects{
+.projects {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   justify-content: space-around;
-  align-items:center;
+  align-items: center;
   column-gap: 20px;
-  row-gap:20px;
-  
-
+  row-gap: 20px;
 }
-  .item{
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(9, 10, 10);
-    border:3px solid var(--mygrey);
-  }
-    .poster{
-      width:100%; 
-      height: 250px;
-      object-fit: cover;
-      border-radius: 1% 1% 1% 30%;
-    }
-   
-    #item-link::after{
-      content:" \003C" " \002E" " \002F" "\003E";
-    }
-   
-  
+.item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(9, 10, 10);
+  border: 3px solid var(--mygrey);
+}
+.poster {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1% 1% 1% 30%;
+}
+
+#item-link::after {
+  content: " \003C"" \002E"" \002F""\003E";
+}
+
 /* Here is footer style -------------------------------------*/
-.footer{
-  display:flex;
-  flex-wrap:wrap;
+.footer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
   background-color: black;
 }
-#footer > p{
+#footer > p {
   flex-basis: 100%;
   font-size: 0.625rem;
 }
 
-
-
-
 /* Animations ------------------------------------------------*/
-@keyframes color-change{
-  0%{
-    color:var(--myred, red);
-    text-shadow: 2px 2px 2px  var(--mygrey, grey);   
+@keyframes color-change {
+  0% {
+    color: var(--myred, red);
+    text-shadow: 2px 2px 2px var(--mygrey, grey);
   }
-  50%{
-    color:var(--myyellow, yellow);
-    text-shadow: 5px 5px 5px  var(--mygrey, grey);
+  50% {
+    color: var(--myyellow, yellow);
+    text-shadow: 5px 5px 5px var(--mygrey, grey);
   }
-  100%{
-    color:var(--mygreen, green);
-    text-shadow: 2px 2px 2px  var(--mygrey, grey);
+  100% {
+    color: var(--mygreen, green);
+    text-shadow: 2px 2px 2px var(--mygrey, grey);
   }
 }
 
 @keyframes arrow-down {
   0% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   50% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
-  100%{
-      transform: translateY(10px);
+  100% {
+    transform: translateY(10px);
   }
 }
 
 @keyframes showup {
-  0%{
-    opacity:0;
+  0% {
+    opacity: 0;
   }
-  50%{
-    opacity:0.5;
+  50% {
+    opacity: 0.5;
   }
-  100%{
-    opacity:0;
+  100% {
+    opacity: 0;
   }
 }
 /*Animation end  */
 
 /* RWD setting -------------------------------------------------*/
-@media screen and (max-width: 768px){
-  :root{
-    font-size:20px;
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 20px;
   }
-  .logo{
+  .logo {
     display: none;
   }
-  .nav{
+  .nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-    /* #quote-box{
+  /* #quote-box{
      animation-play-state: paused;
      visibility: hidden;   
     } */
 
-  .projects{
+  .projects {
     display: grid;
     grid-template-columns: auto;
-  } 
+  }
 }
-@media screen and (max-width: 576px){
-  .nav{
+@media screen and (max-width: 576px) {
+  .nav {
     display: none;
   }
-
 }
-
-  
