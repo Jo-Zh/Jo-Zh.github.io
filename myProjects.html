@@ -46,14 +46,145 @@
     <!-- This is the Projects display section ----------------------->
     <div class="container">
         <hr />
+        <h1 style="text-align: center;">Django Projects</h1>
+        <hr />
+        <!-- Project 1--------------------------------------- -->
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-thumbnail" width="300" src="./images/myAlbumcover.png" alt="cover">
+            </div>
+            <div class="col-md-9">
+                <!-- Here is the Project Name -->
+                <h5 id="myAlbum">My Album</h5>
+                <p>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#myAlbum_app" aria-expanded="false" aria-controls="collapseWidthExample">
+                        about the project...
+                    </button>
+                </p>
+                <div style="min-height: 120px;">
+                    <!-- set div's id = project name  -->
+                    <div class="collapse collapse-horizontal" id="myAlbum_app">
+                        <div class="card card-body" style="width: 500px; height: 100%; overflow: auto;">
+                            It's a django full stack deployed on heroku. It is designed to be a leisure tool, which save
+                            photos, make collections, and catch a beautiful moments.
+                            <hr />
+                            Current realized functions are:<br>
+                            - Create personal account.<br>
+                            - Browse, upload, download pictures or other types of files in an individual account.<br>
+                            - Take a short video in an individual account.<br>
+                            <a href="https://github.com/Jo-Zh/myAlbum">source code</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <h1 style="text-align: center;">React Apps</h1>
+        <hr />
+        <!--React Web Apps Project 1--------------------------------------- -->
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-thumbnail" width="300" src="./images/Expenses Tracker cover.png" alt="cover">
+            </div>
+            <div class="col-md-9">
+                <!-- Here is the Project Name -->
+                <h5 id="expenses">Expense Tracker</h5>
+                <p>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#expenses_app" aria-expanded="false" aria-controls="collapseWidthExample">
+                        about the project...
+                    </button>
+                </p>
+                <div style="min-height: 120px;">
+                    <!-- set div's id = project name  -->
+                    <div class="collapse collapse-horizontal" id="expenses_app">
+                        <div class="card card-body" style="width: 500px; height: 100%; overflow: auto;">
+                            This is a MERN app. Main functions are help people to track monthly expenses and compare how
+                            much spended in each month.
+                            <hr>
+                            Key techniques are:<br>
+                            - Building DB-Server-Front connection with mongoose, express API, cors and axios in React.
+                            So users can manage data by read, add, update and delete<br>
+                            - React styling to realize the bar graph in app-UI to show and compare expenses in different
+                            month.<br>
+                            <a href="https://github.com/Jo-Zh/ExpenseTracker">(The source link)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!--React Web Apps Project 2--------------------------------------- -->
+
+        <!--React Web Apps Project 3--------------------------------------- -->
+
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-thumbnail" width="300" src="./images/Js-Calculator.jpg" alt="cover">
+            </div>
+            <div class="col-md-9">
+                <!-- Here is the Project Name -->
+                <h5 id="cal">Calculator</h5>
+                <p>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#calculator-app" aria-expanded="false" aria-controls="collapseWidthExample">
+                        about the project...
+                    </button>
+                </p>
+                <div style="min-height: 120px;">
+                    <!-- set div's id = project name  -->
+                    <div class="collapse collapse-horizontal" id="calculator-app">
+                        <div class="card card-body" style="width: 500px;">
+                            A small calculator following the formula/Expression Logic rules.<br>
+                            <a href="https://codepen.io/weina-zhong/full/abLGbgw">Click here play it online and see the
+                                source code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--React Web Apps Project 4--------------------------------------- -->
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-thumbnail" width="300" src="" alt="cover">
+            </div>
+            <div class="col-md-9">
+                <!-- Here is the Project Name -->
+                <h5 id="movies">Movie Browser</h5>
+                <p>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#movies_app" aria-expanded="false" aria-controls="collapseWidthExample">
+                        about the project...
+                    </button>
+                </p>
+                <div style="min-height: 120px;">
+                    <!-- set div's id = project name  -->
+                    <div class="collapse collapse-horizontal" id="movies_app">
+                        <div class="card card-body" style="width: 500px;">
+                            React App for browsing movie ads. online.
+                            <hr>
+                            Used techniques:<br>
+                            - React Router<br>
+                            <a href="https://github.com/Jo-Zh/A-Movie-Browser" target="_blank">(The source link)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
         <h1 style="text-align: center;">Web Page Design Projects</h1>
         <hr />
         <!-- Web page Project 1--------------------------------------- -->
         <div class="row">
-            <div class="col">
-                <img class="img-thumbnail" src="./imagines/product landing page.jpg" alt="cover">
+            <div class="col-md-3">
+                <img class="img-thumbnail" width="300" src="./imagines/product landing page.jpg" alt="cover">
             </div>
-            <div class="col">
+            <div class="col-md-9">
                 <!-- Here is the Project Name -->
                 <h5 id="plp">product landing page</h5>
                 <p>
@@ -66,7 +197,7 @@
                 <div style="min-height: 120px;">
                     <!-- set div's id = project name  -->
                     <div class="collapse collapse-horizontal" id="product-landing-page">
-                        <div class="card card-body" style="width: 300px; height: 100%; overflow: auto;">
+                        <div class="card card-body" style="width: 500px; height: 100%; overflow: auto;">
                             This is one of freecodecamp certification projects.
                             you will find <a href="https://codepen.io/weina-zhong/pen/RwLQaML">codePen link here</a>.
                         </div>
@@ -75,119 +206,11 @@
             </div>
         </div>
 
-        <hr />
-        <h1 style="text-align: center;">React Apps</h1>
-        <hr />
-        <!--React Web Apps Project 1--------------------------------------- -->
-        <div class="row">
-            <div class="col">
-                <img class="img-thumbnail" src="./imagines/merrychristmas.jpg" alt="cover">
-            </div>
-            <div class="col">
-                <!-- Here is the Project Name -->
-                <h5 id="gcm">Greeting Cards Maker</h5>
-                <p>
-                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#cards-maker" aria-expanded="false" aria-controls="collapseWidthExample">
-                        about project...
-                    </button>
-                </p>
-                <div style="min-height: 120px;">
-                    <!-- set div's id = project name  -->
-                    <div class="collapse collapse-horizontal" id="cards-maker">
-                        <div class="card card-body" style="width: 300px;">
-                            A small App to personalize greeting cards. The idea came across during Christmas holidays.
-                            still work on firstly improve the front side and then will try to build the database to
-                            store created cards as well as provide templates. <a
-                                href="https://github.com/Jo-Zh/a-Greeting-Card-Creator">Here find the source code</a>.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
 
-        <!--React Web Apps Project 2--------------------------------------- -->
-        <div class="row">
-            <div class="col">
-                <img class="img-thumbnail" src="./imagines/ExpenseItems.jpg" alt="cover">
-            </div>
-            <div class="col">
-                <!-- Here is the Project Name -->
-                <h5 id="pe">Personal Expense</h5>
-                <p>
-                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#personal-expense" aria-expanded="false" aria-controls="collapseWidthExample">
-                        about the project...
-                    </button>
-                </p>
-                <div style="min-height: 120px;">
-                    <!-- set div's id = project name  -->
-                    <div class="collapse collapse-horizontal" id="personal-expense">
-                        <div class="card card-body" style="width: 300px;">
-                            A useful App to record daily personal-expense and show the spending pattern yearly basis. <a
-                                href="https://github.com/Jo-Zh/Personal-Expense-List">(The source link)</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <!--React Web Apps Project 3--------------------------------------- -->
 
+        <hr />
         <div class="row">
-            <div class="col">
-                <img class="img-thumbnail" src="./imagines/Js-Calculator.jpg" alt="cover">
-            </div>
-            <div class="col">
-                <!-- Here is the Project Name -->
-                <h5 id="cal">Calculator</h5>
-                <p>
-                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#calculator-app" aria-expanded="false" aria-controls="collapseWidthExample">
-                        about the project...
-                    </button>
-                </p>
-                <div style="min-height: 120px;">
-                    <!-- set div's id = project name  -->
-                    <div class="collapse collapse-horizontal" id="calculator-app">
-                        <div class="card card-body" style="width: 300px;">
-                            A small calculator following the formula/Expression Logic rules.<br>
-                            <a href="https://codepen.io/weina-zhong/full/abLGbgw">Click here play it online and see the
-                                source code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <!--React Web Apps Project 4--------------------------------------- -->
-        <div class="row">
-            <div class="col">
-                <img class="img-thumbnail" src="./imagines/reactFood.jpeg" alt="cover">
-            </div>
-            <div class="col">
-                <!-- Here is the Project Name -->
-                <h5 id="foa">Food Order App</h5>
-                <p>
-                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#food-order-app" aria-expanded="false" aria-controls="collapseWidthExample">
-                        about the project...
-                    </button>
-                </p>
-                <div style="min-height: 120px;">
-                    <!-- set div's id = project name  -->
-                    <div class="collapse collapse-horizontal" id="food-order-app">
-                        <div class="card card-body" style="width: 300px;">
-                            Working on it ...
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <h5>more projects in <a href="https://github.com/Jo-Zh?tab=repositories">Github</h5>
+            <h5>Source code on <a href="https://github.com/Jo-Zh?tab=repositories" target="_blank">Github</h5>
         </div>
     </div>
     <hr />
