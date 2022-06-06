@@ -27,7 +27,7 @@ body {
 a {
   text-decoration: none;
   color: var(--mygreen);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 /* visited link */
 a:visited {
@@ -35,12 +35,11 @@ a:visited {
 }
 
 /* mouse over link */
-.nav a:hover,
-.projects a:hover {
+a:hover {
   font-style: italic;
-  font-size: x-large;
-  transition-duration: 1s;
+  font-size: 1rem;
   color: var(--mygreen);
+  transition: 1s;
 }
 
 /* visible when mouse click window  */
@@ -246,13 +245,6 @@ u {
   :root {
     font-size: 20px;
   }
-  .logo {
-    display: none;
-  }
-  .nav {
-    display: flex;
-    flex-direction: column;
-  }
 
   .projects {
     display: grid;
@@ -260,11 +252,10 @@ u {
   }
 }
 @media screen and (max-width: 576px) {
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .nav .logo {
+  .nav > ul {
     display: none;
+  }
+  .nav > h5 {
+    margin: auto;
   }
 }
