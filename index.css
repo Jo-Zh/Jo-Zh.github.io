@@ -106,7 +106,7 @@ a:hover {
 }
 
 h1 {
-  padding-top: 2em;
+  padding: 0.2em;
   font-size: 2em;
   color: var(--myyellow);
   text-shadow: 5px 5px 5px var(--mygrey);
@@ -129,7 +129,42 @@ span {
   display: inline-block;
   animation: arrow-down 2s infinite;
 }
+.card-outer {
+  transform-style: preserve-3d;
+  transition: 0.5s linear 0.1s;
+  position: relative;
+  width: 50%;
+  height: 60%;
+  margin: 2em auto;
+}
+.card-outer:hover {
+  transform: rotateY(180deg);
+  outline: 2px solid #fff;
+}
 
+.card {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card ul {
+  margin: auto;
+}
+.front {
+  transform: rotateY(0);
+  background-color: #2d2d2d;
+  color: #fff;
+}
+.back {
+  font-size: 0.8em;
+  text-align: left;
+  transform: rotateY(180deg);
+  color: #fff;
+  background-color: #2d2d2d;
+}
 /*set quote style  */
 #quote-box {
   flex-basis: 100%;
@@ -255,6 +290,13 @@ u {
   }
 }
 @media screen and (max-width: 576px) {
+  :root {
+    font-size: 18px;
+  }
+  .card-outer {
+    height: 50%;
+    width: 95%;
+  }
   .nav > ul {
     display: none;
   }
