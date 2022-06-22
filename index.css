@@ -130,12 +130,14 @@ span {
   animation: arrow-down 2s infinite;
 }
 .card-outer {
+  background-color: transparent;
   transform-style: preserve-3d;
-  transition: 0.5s linear 0.1s;
+  transition: transform 0.8s;
   position: relative;
   width: 50%;
-  height: 50%;
+  height: 55%;
   margin: 2em auto;
+  perspective: 23em;
 }
 .card-outer:hover {
   transform: rotateY(180deg);
@@ -283,11 +285,22 @@ u {
 /*Animation end  */
 
 /* RWD setting -------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   :root {
     font-size: 20px;
   }
-
+}
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 18px;
+  }
+  .card-outer {
+    height: 30%;
+    width: 80%;
+  }
+  .back {
+    font-size: 0.625rem;
+  }
   .projects {
     display: grid;
     grid-template-columns: auto;
