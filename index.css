@@ -309,20 +309,25 @@ u {
   :root {
     font-size: 16px;
   }
+  .card {
+    position: relative;
+  }
   .card-outer {
     height: 200px;
     width: 320px;
   }
-  /* .card-outer,
+  .card-outer:hover,
   .front,
   .back {
-    transform: none;
-  } */
+    transform: rotateY(0);
+    outline: none;
+  }
   .card-outer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .nav > ul {
     display: none;
   }
