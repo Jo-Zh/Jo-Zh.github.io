@@ -162,8 +162,8 @@ span {
   font-size: 0.8em;
   text-align: left;
   transform: rotateY(180deg);
-  color: #fff;
-  background-color: #2d2d2d;
+  color: #2d2d2d;
+  background-color: #d3cccc;
 }
 /*set quote style  */
 #quote-box {
