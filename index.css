@@ -173,6 +173,9 @@ u {
   background-color: rgb(9, 10, 10);
   border: 3px solid var(--myyellow);
 }
+.item:hover {
+  outline: 3px solid yellow;
+}
 .poster {
   width: 100%;
   height: 250px;
