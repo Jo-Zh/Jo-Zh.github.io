@@ -106,7 +106,7 @@ a:hover {
 }
 
 h1 {
-  padding: 0.2em;
+  margin: auto;
   font-size: 2em;
   color: var(--myyellow);
   text-shadow: 5px 5px 5px var(--mygrey);
@@ -134,7 +134,7 @@ span {
   transition: 0.5s linear 0.1s;
   position: relative;
   width: 50%;
-  height: 60%;
+  height: 50%;
   margin: 2em auto;
 }
 .card-outer:hover {
@@ -152,6 +152,10 @@ span {
 }
 .card ul {
   margin: auto;
+  text-align: center;
+}
+.card li {
+  text-align: left;
 }
 .front {
   transform: rotateY(0);
@@ -291,11 +295,11 @@ u {
 }
 @media screen and (max-width: 576px) {
   :root {
-    font-size: 18px;
+    font-size: 16px;
   }
   .card-outer {
-    height: 50%;
-    width: 95%;
+    height: 30%;
+    width: 90%;
   }
   .nav > ul {
     display: none;
